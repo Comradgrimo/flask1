@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<table>
+    <tr><td valign="top">
+        {% for i in entries %}
+            {% if i.name.endswith('.html') %}
+                <a href="{{ url_for("download", path=i.path) }}">{{ i.name }}</a></br>
+            {% endif %}
+        {% endfor %}
+    </td></tr>
+    <tr><td valign="top">
+        {% for i in entries %}
+            {% if i.name.endswith('.html') %}
+                <div class="wrap"><iframe src="{{ url_for("download", path=i.path) }}" width="1200" height="530"></iframe></div>
+            {% endif %}
+        {% endfor %}
+    </td></tr>
+</table>
+
+</body>
+</html>
