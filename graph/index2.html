@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="http-equiv" content="Content-type: text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" charset="utf-8">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+  let myChart = document.getElementById('myChart').getContext('2d');
+
+  let lineChart = new Chart(myChart,{ type: 'line', data: {labels: ["'10:02:59", '10:03:00', '10:03:02', '10:03:03', '10:03:05', '10:03:06', '10:03:07', '10:03:08', '10:03:10', '10:03:11'], datasets: 
+                [
+                    {data: ['1.9375', '1.9375', '1.9375', '1.9375', '2', '2', '2', '1.9375', '1.9375', '1.9375'], label: "Temperature", borderColor: "#009494", fill: false},
+                    {data: ['87.2958755493164', '87.3116760253906', '87.3116760253906', '87.3116760253906', '87.3175277709961', '87.3175277709961', '87.3175277709961', '87.3391723632812', '87.3391723632812', '87.3391723632812'], label: "Wetness", borderColor: "#76116d", fill: false}, 
+                    {data: ['70.7', '70.7', '70.7', '70.7', '70.7', '70.7', '70.7', '70.7', '70.7', '70.7'], label: "Q GazGen", borderColor: "#4a2339", fill: false}, 
+                    {data: ['87.41', '87.41', '87.41', '87.41', '87.41', '87.41', '87.41', '87.41', '87.46', '87.46'], label: "Q Kotelnaya", borderColor: "#542323", fill: false}, 
+                    {data: ['0.729', '0.729', '0.729', '0.729', '0.729', '0.729', '0.729', '0.729', '0.73', '0.73'], label: "Gkkal Kotelnaya", borderColor: "#584b3a", fill: false}, 
+                    {data: ['79.9', '80.0', '80.1', '80.2', '80.0', '80.2', '80.1', '80.1', '80.1', '80.1'], label: "Temperature 1", borderColor: "#937d62", fill: false}, 
+                    {data: ['81.6', '81.5', '81.4', '81.5', '81.5', '81.5', '81.5', '81.3', '81.4', '81.3'], label: "Temperature 2", borderColor: "#800000", fill: false}, 
+                    {data: ['80.0', '79.9', '80.1', '80.1', '79.9', '80.1', '80.0', '80.2', '80.0', '80.0'], label: "Temperature 1+2", borderColor: "#bc8f8f", fill: false}, 
+                    {data: ['54.3', '54.3', '54.3', '54.1', '54.3', '54.2', '54.3', '54.2', '54.1', '54.3'], label: "Temperature Obratka", borderColor: "#8382ff", fill: false},  
+
+
+                ]}, 
+            options: {title: {display: true, text: 'Parametri v vide gradicov'}}});
+</script>
+</body>
+</html>

@@ -12,13 +12,20 @@ def favicon():
 @app.route('/')
 @app.route('/<path:path>')
 def dir_viewer(path='./html'):
+    return render_template("hello.html", entries=list(os.scandir(path))).encode('UTF-8')
 
-    return render_template("hello.html", entries=os.scandir(path)).encode('UTF-8')
+@app.route('/graph')
+def dir_viewer1(path='./graph'):
+    return render_template("graph.html", entries=list(os.scandir(path))).encode('UTF-8')
 
 @app.route("/download/<path:path>")
 def download(path):
     return send_file(path)
+
+
+
+
 if __name__ == '__main__':
     app.run(host='192.168.15.164', port='5010')
 
-#192.168.15.164
+#192.168.0.13
