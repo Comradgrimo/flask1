@@ -1,0 +1,16 @@
+{% extends "hello.html" %}
+
+{% block title %}
+    <title>404 - страница не найдена!</title>
+{% endblock %}
+
+{% block body %}
+	<div class="error404">
+		<img src="{{ url_for('static', filename='fonError.jpg') }}">
+		<h1>404 - страница не найдена!</h1>
+		Возможно она была удалена,
+		либо Вы набрали неверный адрес!
+		<br><br>
+		<a href="/">Перейдем на Главную страницу?</a>
+	</div>
+{% endblock %}

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" charset="utf-8">#}
-    <title>Title</title>
+    <title>Графики</title>
 {#    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">#}
 </head>
 
@@ -12,22 +12,22 @@
 {% extends "hello.html" %}
 {% block content %}
 {% endblock %}
-<div class="links">
-        {% for i in entries %}
-            {% if i.name.endswith('.html') %}
-                <a href="{{ url_for("download", path=i.path) }}">{{ i.name }}</a></br>
-            {% endif %}
-        {% endfor %}
-</div>
-<div class="frames">
-        {% for i in entries %}
-            {% if i.name.endswith('.html') %}
-                <div class="wrap"><iframe src="{{ url_for("download", path=i.path) }}" width="1200" height="530"></iframe></div>
-            {% endif %}
-        {% endfor %}
-
-
-</div>
+{#<div class="links">#}
+{#        {% for i in entries %}#}
+{#            {% if i.name.endswith('.html') %}#}
+{#                <a href="{{ url_for("download", path=i.path) }}">{{ i.name }}</a></br>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{#</div>#}
+{#<div class="frames">#}
+{#        {% for i in entries %}#}
+{#            {% if i.name.endswith('.html') %}#}
+{#                <div class="wrap"><iframe src="{{ url_for("download", path=i.path) }}" width="1200" height="530"></iframe></div>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{##}
+{##}
+{#</div>#}
 
 </body>
 </html>
